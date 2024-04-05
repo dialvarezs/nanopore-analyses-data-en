@@ -1,0 +1,16 @@
+- Basecalling y demultiplexación 
+Tarea 1: Se desean secuenciar 88 muestras de 16s con Oxford Nanopore. ¿Cuántas muestras deben secuenciarse por celda?. Considere la siguiente información:
+- Los amplicones a secuenciar son de entre 1000 - 2000 pares de bases.
+- Se desea una cantidad de lecturas mínima de 200.000 por cada muestra
+- Se pierde aproximadamente un 30% de data luego de los procesos de basecalling y demultiplexación.
+- Habitualmente las secuenciaciones no salen balanceadas.
+- Se utilizará una celda con química 9.4.1
+
+Tarea 2: Se desea secuenciar 2 genes ¿Cuántas Gb se necesita obtener?
+- Los amplicones a secuenciar son de aproximadantes XX a YY.
+- Se pierde aproximadamente un 30% de data luego de los procesos de basecalling y demultiplexación.
+- Habitualmente las secuenciaciones no salen balanceadas.
+- Se utilizará una celda con química 9.4.1
+
+
+https://gatk.broadinstitute.org/hc/en-us/articles/360035531692-VCF-Variant-Call-Format
