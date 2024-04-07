@@ -244,7 +244,7 @@ guppy_basecaller \
 - You can used the `history` command, which displays the last 500 used commands.
 - Using `Ctrl+r`, you can search for a command that contains a specific word.
 
-## Work environment
+## Working environment
 
 Work enviroment is the management system used for the management and execution of tools. This aspect is extremely relevant, as there are generally many ways in which user can  install and used the tools and the requirements, making management can be quite tedious. The most notable alternative is `conda` and containers, such as `docker` or `apptainer`. During these lesson we will use conda for the installation and use of bioniformatics tools.
 ### Conda

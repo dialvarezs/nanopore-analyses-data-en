@@ -1,17 +1,12 @@
-## Programa del Taller
+## Program Content
 
-#### Introducción del curso
+Chapter 1: [[1-working-env-and-file-types|Working environment and file types]]
+- Command (CLI) line usage
+- Working environment
+- File types
 
-Chapter 1: [[1-working-env-and-file-types|Ambiente de trabajo y tipos de archivos]]
-- Introducción al curso 
-- Flujos de trabajo comunes
-- Uso de línea de comando
-- Ambientes de trabajo 
-- Tipos de archivos
-
-Clase 2: [[2-basecalling-and-demultipexing|Basecalling y Demultiplexación]]
-- Concepto básicos
+Clase 2: [[2-sequencing-and-basecalling|Sequencing and Basecalling]]
+- Basic considerations when using ONT
 - EPI2ME
 - Basecalling
-- Demultiplexación
 

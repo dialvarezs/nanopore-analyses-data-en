@@ -1,5 +1,5 @@
 ---
-title: 2. Basecalling and Demultiplexing
+title: 2. Sequencing and basecalling
 ---
 > [!tip] Topics in this chapter
 > - Considerations when working with Oxford Nanopore
@@ -116,7 +116,7 @@ Dorado features multiple models with different balances between basecalling accu
 
 While the advantage of models with higher accuracy is clear, their greater hardware requirements limit their use to systems with more power or a longer runtime. In particular, the `sup` model has such a high computational cost that it becomes impractical to use without dedicated hardware (GPU). Basecalling can be performed in real-time while sequencing the sample (since MinKNOW integrates Dorado), however, `sup` is only selectable is the computer has a comptatible GPU, and using `hac` can result in the basecalling process continuing for multiple days after the experiment ends if appropriate hardware is not available.
 
-#### #### Sequencing Output
+#### Sequencing Output
 
 When sequencing a sample, MinKNOW generates multiple files that include the sequenced information and log files. The most relevant files are the `.pod5` files, which contain the variations in voltage recorded by the pore as the DNA strand passes through. These files can also contain the result of the basecalling if this option was enabled in MinKNOW.
 
