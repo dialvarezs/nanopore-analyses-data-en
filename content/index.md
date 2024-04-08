@@ -1,5 +1,6 @@
-## Course content
-
+---
+title: Course content
+---
 **Chapter 1: [[1-working-env-and-file-formats|Working environment and file types]]**
 - Command (CLI) line usage
 - Managing work environment with Conda
