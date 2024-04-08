@@ -1,10 +1,10 @@
 ---
 title: 3. Quality control and filters
 ---
-Temas a abordar:
-- Como realizar un control de calidad con herramientas como Fastqc y Nanoplot y entender los resultados que entregan las herramientas.
-- Como resumir las estadísticas para un conjunto de muestras
-- Como filtrar nuestros datos con herramientas como Fastp y Cutadapt
+>[!summary] In this chapter
+> - How to perform quality control using tools such as FastQC and NanoPlot and understand the results provided by these tools.
+> - How to summarize statistics for a set of samples.
+> - How to filter your data using tools like Fastp and Cutadapt.
 
 ## Quality control
 The quality check process is a critical step when analyzing raw data, so it is quite important to perform quality control and filter out poor quality reads and remove adapters, etc before starting the analyses.
@@ -53,7 +53,7 @@ FastQC have the following modules:
 
 * **Contenido de N's por base:** Percentage of base calls at each position for which an N was called.
 
-* **# Sequence Length Distribution:** Distribution of fragment sizes.
+* **Sequence Length Distribution:** Distribution of fragment sizes.
 
 * **Duplicate Sequences:** Degree of duplication for every sequence in a library. The plot shows the relative number of sequences with different degrees of duplication.  A low level of duplication may indicate a very high level of coverage of the target sequence, but a high level of duplication is more likely to indicate some kind of enrichment bias
 			- Only  the first 100,000 sequences in each file are analysed and any reads over 75bp in length are truncated to 50bp for the purposes of this analysis.
@@ -61,7 +61,7 @@ FastQC have the following modules:
 * **Overrepresented Sequences:** This module lists all of the sequence which make up more than 0.1% of the total. For each overrepresented sequence the program will look for matches in a database of common contaminants and will report the best hit it finds.
 			- Only  the first 100,000 sequences in each file are analysed and any reads over 75bp in length are truncated to 50bp for the purposes of this analysis.
 
-* **# Adapter Content:** Shows a cumulative percentage count of the proportion of your library which has seen each of the adapter sequences at each position. FastQC included a set of adapters from Illumina, Nextera y Solid.
+* **Adapter Content:** Shows a cumulative percentage count of the proportion of your library which has seen each of the adapter sequences at each position. FastQC included a set of adapters from Illumina, Nextera y Solid.
 
 FastQC can be installed vía conda:
 ```bash
