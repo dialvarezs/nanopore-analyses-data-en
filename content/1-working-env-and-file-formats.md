@@ -101,7 +101,7 @@ If the `ls` command is executed without any parameters, the output will show the
 
 The `cp` (copy) command is a utility for copying files and directories from one location to another within the file system. When copying directories, the `-r` (or `--recursive`) option is neccesary, as it enables the `cp` command to copy directories and their contents recursively. This means that not only the directory itself but all its subdirectories and the files within them will be copied to the specified destination.
 
->[!warning] Risk of overwritting files
+>[!danger] Risk of overwritting files
 >By default, using `cp` to copy a file to a location where a file with the same name exists will overwrite the existing file without warning. It's crucial to check file names and paths carefully before executing the command, particularly in scripts or automated tasks.
 >
 > To prevent accidental overwrites, consider using the `-i` (or `--interactive`) option with `cp`. This prompts for confirmation before overwriting any files, adding a layer of protection against data loss.
@@ -171,7 +171,7 @@ pwd
 #### Deleting files `rm`
 The `rm` (remove) command is used to delete files and directories.
 
->[!warning] Permanent deletion of files
+>[!danger] Permanent deletion of files
 >Files deleted with `rm` in Linux do not move to temporary storage like a recycle bin; they are immediately removed from the file system.Use this command with caution to prevent unintended data loss.
 
 ![[rm.webm]]
@@ -348,7 +348,7 @@ Additionally, a package version can be specified.
 conda install -c bioconda flye=2.9.1
 ```
 
->[!tip] Package conflicts
+>[!warning] Package conflicts
 >When installing packages, it is highly recommended to check the version of the package on the official site or repository, because sometimes conda will install older versions when there are conflicting dependencies. If you can't install the version you want in the current environment, consider installing it in a new environment.
 ##### Listing installed packages
 
