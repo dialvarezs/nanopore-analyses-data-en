@@ -177,7 +177,7 @@ The `rm` (remove) command is used to delete files and directories.
 ![[rm.webm]]
 
 The `rm -r` option enhances the command to allow for the recursive deletion of directories and their contents.
-#### #### Viewing file contents (`less`, `cat`, `head`, `tail`)
+#### Viewing file contents (`less`, `cat`, `head`, `tail`)
 
 Several commands are available for viewing file contents, each suited for different needs:
 - **`cat`**: Displays the entire file content to the standard output (terminal).
