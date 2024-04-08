@@ -1,5 +1,5 @@
 ---
-title: Oxford Nanopore Analysis Course
+title: Oxford Nanopore Data Analysis Course
 ---
 By Diego Alvarez ([@dialvarezs](https://github.com/dialvarezs)) and Jacqueline Aldridge ([@JacquelineAldridge](https://github.com/JacquelineAldridge)).
 # Contents
@@ -16,8 +16,8 @@ By Diego Alvarez ([@dialvarezs](https://github.com/dialvarezs)) and Jacqueline A
 
 **Chapter 3: [[3-quality-control-and-filters|Quality control and filters]]**
 - Quality check with Fastp and Nanoplot
-- Agreggating multiple quality reports with MultiQC
+- Aggregating multiple quality reports with MultiQC
 - Filter FASTQ data with Fastp
 
 **Chapter 4: [[4-sequence-manipulation|Sequence manipulation]]**
-- Manipulating sequences with seqkit
+- Manipulating sequences with SeqKit
