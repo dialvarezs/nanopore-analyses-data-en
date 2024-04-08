@@ -142,11 +142,11 @@ multiqc <path_to_fastqc_results> --filname multiqc_raw_data
 
 ## Filtros de calidad
 #### Fastp
-[Repositorio oficial](https://github.com/OpenGene/fastp)
+[Repository](https://github.com/OpenGene/fastp)
 
-Fastp es una herramienta para procesar archivos en formato fastq. Permite recortar adaptadores, filtrar por calidad, recortar extremos por calidad o por posición determinada, filtrar lecturas por largo mínimo y  máximo, entre otras características.
+Fastp is a tool for processing fastq format files. It allows for adapter trimming, quality filtering, trimming by quality or specific positions, filtering reads by minimum and maximum length, among other features.
 
-Se puede instalar fastp vía conda y verificar su versión y ayuda:  
+Fastp can be installed via conda, and you can check its version and help options: 
 ```bash
 conda install -c bioconda fastp
 
@@ -154,34 +154,33 @@ fastp --help
 fastp --verson
 ```
 
-Se puede indicar a fastp archivos provenientes de secuenciaciones Single end, o también pasarle ambos archivos al utilizar secuenciación Pair End. Dos ejemplos sencillos de ejecución utilizando los parámetros por defecto con diferentes tipos de secuenciaciones sería:
+Fastp can handle files from single-end sequencing or accept both files for pair-end sequencing. Here are two simple examples of executing with default parameters for different sequencing types:
 ```bash
 fastp -i seq.fastq -o seq_filtered.fastq  # Single end data
 fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 out.R1.fq.gz --out2 out.R2.fq.gz  # Pair end data
 ```
-El ejemplo anterior utilizaría los filtros por defecto de Fastp (calidad apta de Q15, detectar adaptadores para Illumina, tamaño mínimo de 15pb, etc.), por lo que hay que tener cuidado y verificar que los filtros por defecto sean acorde a los filtros que queremos realizarle a nuestros datos.
+The above example would use Fastp's default filters (suitable quality of Q15, adapter detection for Illumina, minimum size of 15bp, etc.), so it's important to ensure that the default filters align with the desired filters for your data.
 
-Fastp utiliza por defecto un método de filtrado de reads en el que se determina si un read pasa o no el filtro considerando si un determinado porcentaje de sus bases cumple con cierta calidad. Por defecto, se requiere que un 60% de las bases posean calidad igual a superior a Q15.
-Igualmente, es posible cambiar el método a uno basado en la calidad media del read (con la opción `-e`).
+By default, Fastp uses a read filtering method that determines if a read passes based on whether a certain percentage of its bases meet a specific quality level. Normally, 60% of the bases must be equal to or above quality Q15. However, you can switch to a method based on the average quality of the read (using the `-e` option).
 
-Algunos parámetros a tener en consideración a la hora de utilizar Fastp:
-* `--disable_quality_filtering (-Q)`: Deshabilita el filtro por defecto de calidad de fastp.
-* `--qualified_quality_phred (-q)`: Para indicar la calidad mínima para que una base se considere con calidad apropiada (por defecto 15).
-* `--average_qual (-e)`: Calidad mínima promedio para que una secuencia sea considerada como apta.
-* `--unqualified_percent_limit (-u)`: Porcentaje permitido de bases que no pasen el corte de calidad (por defecto 40%).
-* `--disable_adapter_trimming (-A)`: Desactivar filtro de adaptadores por defecto (adaptadores de secuenciaciones Paired End y Single End de Illumina).
-* `--adapter_fasta`: En caso de deshabilitar el filtro de adaptadores por defecto, se puede indicar un archivo que posea los adaptadores de nuestra secuenciación y pedirle que los elimine.
-* `--length_required`: Se puede indicar un largo mínimo y descartar todas aquellas lecturas que tengan un tamaño menor al indicado (por defecto es 15bp).
-* `--length_limit`: Se puede indicar un largo máximo, y descartar todas aquellas lecturas que tengan un tamaño mayor al indicado.
-* `--cut_front`: Eliminar las bases al comienzo de la secuencia (5') que tengan una calidad promedio menor a la indicada con ` cut_mean_quality`. Se utiliza una ventana de 4pb para hacer los cálculos de calidad promedio (modificable mediante `cut_window_size`).
-* `--cut_tail`: Eliminar las bases al final de la secuencia (3') que tengan una calidad promedio menor a la indicada con ` cut_mean_quality`.
-* `--cut_mean_quality`: Calidad mínima utilizada para recortar los extremos de la secuencia por calidad promedio (al utilizar parámetros como `cut_front`, `cut_tail`) (por defecto Q20).
-* `--trim_front`: Recortar una cantidad fija de bases al comienzo de la secuencia (5').
-* `--trim_tail`: Recortar una cantidad fija de bases al final de la secuencia (3').
-* `--max_len`: Si la lectura es mayor al tamaño indicado, recortar las bases restantes en 3'.
-* `--disable_trim_poly_g`: Por defecto fastp elimina las colas polyG que encuentre, esta opción permite deshabilitar esta caracteristica.
+Some parameters to consider when using Fastp:
+- `--disable_quality_filtering (-Q)`: Disables Fastp's default quality filter.
+- `--qualified_quality_phred (-q)`: Specifies the minimum quality for a base to be considered high-quality (default is 15).
+- `--average_qual (-e)`: Minimum average quality for a sequence to be considered suitable.
+- `--unqualified_percent_limit (-u)`: Allowed percentage of bases that do not meet the quality threshold (default is 40%).
+- `--disable_adapter_trimming (-A)`: Disable default adapter filtering (for Illumina's Paired End and Single End sequencing).
+- `--adapter_fasta`: If default adapter filtering is disabled, you can specify a file containing your sequencing adapters to be removed.
+- `--length_required`: Allows setting a minimum length and discarding reads shorter than this (default is 15bp).
+- `--length_limit`: Allows setting a maximum length, discarding reads longer than this.
+- `--cut_front`: Remove bases at the start of the sequence (5') that have an average quality lower than specified with `cut_mean_quality`. A 4bp window is used to calculate average quality (modifiable via `cut_window_size`).
+- `--cut_tail`: Remove bases at the end of the sequence (3') that have an average quality lower than specified with `cut_mean_quality`.
+- `--cut_mean_quality`: Minimum quality used for trimming the ends of the sequence for average quality (when using parameters like `cut_front`, `cut_tail`) (default is Q20).
+- `--trim_front`: Trim a fixed number of bases from the start of the sequence (5').
+- `--trim_tail`: Trim a fixed number of bases from the end of the sequence (3').
+- `--max_len`: If the read is longer than the specified size, trim the remaining bases at 3'.
+- `--disable_trim_poly_g`: By default, Fastp removes polyG tails it finds; this option allows disabling this feature.
 
-A continuación se muestran ejemplos de ejecución utilizando parámetros personalizados: 
+Below are examples of executing with custom parameters:
 ```bash
 fastp -i <archivo_fastq> -o <arhivo_output> --html fastp_report.html \
   --disable_trim_poly_g --disable_adapter_trimming \
@@ -202,19 +201,6 @@ fastp -i input.fastq -o output.fastq --html fastp_report.html \
   --cut_mean_quality 12
 ```
 
-Cabe destacar que `fastp` cuenta con muchas opciones más para realizar filtros y procesar archivos fastq, por lo que revisar su ayuda o documentación será de gran utilidad. 
+It's worth noting that `fastp` offers many more options for filtering and processing fastq files, so reviewing its help or documentation can be very beneficial.
 
-Fastp entrega como resultado un reporte con la información general del archivo utilizado como input, e información relevante antes de realizar los filtros de calidad y luego de realizar los filtros de calidad. Esta información puede resumirse a través de MultiQC utilizando el módulo diseñado para trabajar con archivos provenientes de Fastp (`fastp`).
-
-Tarea: Realizar control de calidad y filtros de calidad a datos de genoma completo. Se espera obtener los siguientes reportes:
-	- Reporte `multiqc` obtenido con `fastqc` (antes y después de filtros)
-	- Reporte `multiqc` obtenido con `NanoPlot` (antes y después de filtros)
-	 - Reporte `multiqc` de filtrado con `fastp` 
-	- Calcular la profundidad post filtros
-	- Indicar si los datos son adecuados para realizar ensamblaje de genoma (justificar brevemente)
-	- Reporte técnico con detalles de las versiones de las herramientas, filtros aplicados y comandos utilizados.
-	- Idealmente juntar los 3 reportes de calidad en un solo reporte final de `multiqc`.
-
-
-
-* Considerar que las secuencias no poseen adaptadores.
+Fastp generates a report summarizing the general information of the input file and relevant information before and after applying quality filters. This information can be aggregated through MultiQC using the module designed to work with files from Fastp (`fastp`).
