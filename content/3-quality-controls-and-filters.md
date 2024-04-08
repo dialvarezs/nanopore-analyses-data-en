@@ -1,3 +1,6 @@
+---
+title: 3. Quality control and filters
+---
 Temas a abordar:
 - Como realizar un control de calidad con herramientas como Fastqc y Nanoplot y entender los resultados que entregan las herramientas.
 - Como resumir las estadísticas para un conjunto de muestras

@@ -1,3 +1,7 @@
+---
+title: 4. Sequence manipulation
+---
+
 Temas a abordar:
 - Manipulación de archivos procedentes de `raw data` (`fasta`, `fastq`) o de ensamblajes con `Seqkit`.
 - Obtención de información taxonomica con `Taxonkit`

@@ -1,7 +1,7 @@
 ---
 title: 2. Sequencing and data analysis options
 ---
-> [!tip] Topics in this chapter
+> [!summary] Topics in this chapter
 > - Considerations when working with Oxford Nanopore
 > - Basecalling
 > - Demultiplexing
@@ -71,7 +71,7 @@ Consensus is achieved by assembling multiple reads, thereby reducing errors thro
 | R10.4.1  | Q50 at 10-20x        | Basecalling sup + assembly with Flye + medaka polishing |
 Most up-to-date information regarding Nanopore accuracy, please visit [Oxford Nanopore Technologies' website](https://nanoporetech.com/platform/accuracy).
 
-## Options to analyze data
+## Data analysis options
 ### EPI2ME
 
 [Official page](https://epi2me.nanoporetech.com/workflows) (_requires authentication_)

@@ -1,7 +1,7 @@
 ---
 title: 1. Working environment and file formats
 ---
-> [!tip] Topics in this chapter
+> [!summary] Topics in this chapter
 > - Command line (CLI) usage
 > - Managing work environment with Conda
 > - Common file formats in bioinformatics
