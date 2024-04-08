@@ -55,6 +55,7 @@ The tool used for basecalling and demultiplexing generally can remove these elem
 
 Sequencing accuracy is crucial because it determines the amount of data required to achieve the desired precision in the desired type of analysis, as well as how many samples can be processed in a single experiment.
 #### RAW Data
+
 Utilizing the latest V14 chemistry and SUP basecalling algorithms, Nanopore technology can achieve raw data accuracies of up to Q23 with simplex sequencing and Q30 with duplex sequencing.
 
 | Flowcell | Kit                         | Basecalling        | Raw read accuracy |
@@ -64,12 +65,14 @@ Utilizing the latest V14 chemistry and SUP basecalling algorithms, Nanopore tech
 | R10.4.1  | Ligation Sequencing Kit V14 | Duplex basecalling | >99.9% (Q30)      |
 
 #### Consensus
+
 Consensus is achieved by assembling multiple reads, thereby reducing errors through overlapping.
 
 | Flowcell | Consensus precision | Analysis tools                                          |
 | -------- | ------------------- | ------------------------------------------------------- |
 | R10.4.1  | Q50 at 10-20x       | Basecalling sup + assembly with Flye + medaka polishing |
-Most up-to-date information regarding Nanopore accuracy, please visit [Oxford Nanopore Technologies' website](https://nanoporetech.com/platform/accuracy).
+
+For most up-to-date information regarding Nanopore accuracy, visit [Oxford Nanopore Technologies' website](https://nanoporetech.com/platform/accuracy).
 
 ## Data analysis options
 ### EPI2ME
