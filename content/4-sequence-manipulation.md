@@ -15,9 +15,9 @@ conda install -c bioconda seqkit
 ```
 
 - Convert FASTQ file to FASTA format.
-```bash
-seqkit fq2fa sequences.fq -o sequences.fa
-```
+	```bash
+	seqkit fq2fa sequences.fq -o sequences.fa
+	```
 
 - Convert a multi-line FASTA file to a 4-line FASTA format.
 ```bash
@@ -74,4 +74,4 @@ seqkit seq sequences.fa --rna2dna
  seqkit grep -p "d9321e7b-3969-4ecd-9bb5-e85d4c59d86f" sequences.fa
  seqkit grep -f ids_to_filter.txt sequences.fa
 ```
-	The `-v` option can be used for reverse search, i.e., selecting all reads that are not in the specified list.
+The `-v` option can be used for reverse search, i.e., selecting all reads that are not in the specified list.
