@@ -4,7 +4,7 @@ title: 4. Sequence manipulation
 >[!summary] In this chapter
 > - Manipulation of sequence files (`FASTA`, `FASTQ`) using seqkit.
 
-## seqkit
+## SeqKit
 [Repository](https://github.com/shenwei356/seqkit) || [Documentation](https://bioinf.shenwei.me/seqkit/usage/)
 
 SeqKit is a versatile and high-performance command-line toolkit specifically designed for the manipulation and analysis of FASTA and FASTQ files. 
