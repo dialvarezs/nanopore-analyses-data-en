@@ -1,11 +1,11 @@
 ## Program Content
 
-Chapter 1: [[1-working-env-and-file-types|Working environment and file types]]
+Chapter 1: [[1-working-env-and-file-formats|Working environment and file types]]
 - Command (CLI) line usage
-- Working environment
-- File types
+- Managing work environment with Conda
+- Common file formats in bioinformatics
 
-Clase 2: [[2-sequencing-and-basecalling|Sequencing and Basecalling]]
+Chapter 2: [[2-sequencing-and-data-analysis|Sequencing and Basecalling]]
 - Basic considerations when using ONT
 - EPI2ME
 - Basecalling
