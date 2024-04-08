@@ -1,7 +1,7 @@
 ---
 title: 2. Sequencing and data analysis options
 ---
-> [!summary] Topics in this chapter
+> [!summary] In this chapter
 > - Considerations when working with Oxford Nanopore
 > - Basecalling
 > - Demultiplexing

@@ -1,7 +1,7 @@
 ---
 title: 1. Working environment and file formats
 ---
-> [!summary] Topics in this chapter
+> [!summary] In this chapter
 > - Command line (CLI) usage
 > - Managing work environment with Conda
 > - Common file formats in bioinformatics
@@ -223,7 +223,7 @@ micro file.txt
 - **`Ctrl` + `y`**: Redo the last undo.
 - **`Ctrl` + `s`**: Save changes.
 
-### ### Advanced command line techniques
+### Advanced command line techniques
 
 #### Pipe (`|`) operator
 The pipe operator `|` enables chaining commands by directing the output of one command as input to another. This facilitates complex data processing tasks without the need to save intermediate results.
