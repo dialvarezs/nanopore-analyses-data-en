@@ -2,76 +2,79 @@
 title: 4. Sequence manipulation
 ---
 >[!summary] In this chapter
-> - Manipulation of sequence files (`fasta`, `fastq`) using seqkit.
+> - Manipulation of sequence files (`FASTA`, `FASTQ`) using seqkit.
 
 ## seqkit
 [Repository](https://github.com/shenwei356/seqkit) || [Documentation](https://bioinf.shenwei.me/seqkit/usage/)
 
-Seqkit is a efficient tool for manipulating and processing FASTA and FASTQ files.
+SeqKit is a versatile and high-performance command-line toolkit specifically designed for the manipulation and analysis of FASTA and FASTQ files. 
 
-It can be installed via conda.
+This toolkit streamlines a wide array of bioinformatics tasks, from basic sequence manipulation, such as conversion between FASTQ and FASTA formats, sequence sorting, and deduplication, to more complex analyses like sequence statistics generation, sample filtering by various criteria (length, quality, ID), and even sequence transformation operations (e.g., complementing and reverse-complementing sequences).
+
+Installation is straightforward with conda:
 ```bash
 conda install -c bioconda seqkit
 ```
 
-- Convert FASTQ file to FASTA format.
+SeqKit offers a comprehensive suite of functionalities, including:
+- **FASTQ to FASTA Conversion:** Convert FASTQ files to FASTA format.
 	```bash
 	seqkit fq2fa sequences.fq -o sequences.fa
 	```
 
-- Convert a multi-line FASTA file to a 4-line FASTA format.
+- **FASTA Formatting:** Reformat multi-line FASTA files to 4-line FASTA format.
 	```bash
 	seqkit seq reads_1.fa -w 0
 	```
 
-- Convert sequences to their reverse complementary
+- **Reverse Complementary:** Convert sequences to their reverse complement.
 	```bash
 	 seqkit seq hairpin.fa.gz --reverse --complement
 	```
 
-- Remove gaps within sequences.
+- **Gap Removal:** Eliminate gaps within sequences.
 	```bash
 	seqkit seq --remove-gaps
 	```
 
-- Filter sequences by length.
+- **Sequence Length Filtering:** Filter sequences based on their length.
 	```bash
 	seqkit seq sequences.fa --min-len 100 --max-len 1000
 	seqkit seq sequences.fa --min-len 100 --max-len 1000
 	```
 
-- Get basic statistics of the sequences (number of sequences, minimum and maximum length, average length, etc.). Statistics can be obtained for multiple files simultaneously.
+- **Sequence Statistics:** Generate detailed statistics for sequences, such as count, min/max/average length, etc. Supports multiple files.
 	```bash
 	seqkit stats sequences.fa
 	seqkit stats *.f{a,q}.gz
 	```
 
-- Obtain a histogram of sequence sizes or average quality.
+- **Histograms of Sequence Attributes:** Create histograms for sequence lengths or average quality scores.
 	```bash
 	seqkit watch --fields ReadLen sequences.fq.gz -O histogram_len.png
 	seqkit watch --fields MeanQual sequences.fq.gz -O histogram_quality.png
 	```
 	Available fields for histogram: ReadLen, MeanQual, GC, GCSkew.
 	
-- Translate nucleotide sequences to aminoacids.
+- **Translation to Amino Acids:** Translate nucleotide sequences to amino acids.
 	```bash
 	seqkit translate c.fna
 	```
 
-- Print sequence names, or their identifiers only.
+- **Sequence Name Extraction:** Extract sequence names or identifiers.
 	```bash
 	seqkit seq hairpin.fa.gz --name
 	seqkit seq hairpin.fa.gz --name --only-id
 	```
 
-- Convert RNA sequences to DNA.
+- **RNA to DNA Conversion:** Transform RNA sequences to DNA.
 	```bash
 	seqkit seq sequences.fa --rna2dna
 	```
 
-- Filter sequences by ID.
+- **Sequence Filtering by ID:** Filter sequences by specific IDs.
 	```bash
 	seqkit grep -p "d9321e7b-3969-4ecd-9bb5-e85d4c59d86f" sequences.fa
 	seqkit grep -f ids_to_filter.txt sequences.fa
 	```
-	The `-v` option can be used for reverse search, i.e., selecting all reads that are not in the specified list.
+	Use `-v` for reverse filtering, i.e., to exclude specified IDs.
