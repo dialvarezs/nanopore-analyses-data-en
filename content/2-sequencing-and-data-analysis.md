@@ -50,7 +50,7 @@ Depending on the experiment's design, the generated sequence may contain differe
 - Adapter: in all cases.
 The tool used for basecalling and demultiplexing generally can remove these elements from the sequence, leaving only the region of interest.
 
-[[amplicon.jpg]]
+![[amplicon.jpg]]
 
 ### Oxford Nanopore accuracy
 
