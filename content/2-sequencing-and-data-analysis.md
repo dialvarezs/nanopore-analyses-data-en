@@ -105,7 +105,7 @@ Bioinformatics pipelines are a prevalent method for executing complex bioinforma
 
 Bioinformatics pipelines are essential for automating and ensuring streamlined, reproducible analyses. This is accomplished by specifying the execution order of tools, how they will be executed, and the handling of their outputs (whether to store them, use them as input for another tool, transform them, etc.).
 
-There are several tools available for defining and executing workflows, such as [Nextflow]([https://www.nextflow.io/](https://www.nextflow.io/)), [Snakemake](https://snakemake.readthedocs.io/en/stable/) o [Cromwell](https://cromwell.readthedocs.io/en/stable/). These tools provide the syntax for defining and developing workflows and enable their execution across different computational environments. Developing new pipelines might require programming skills for integration steps and/or post-processing tasks.
+There are several tools available for defining and executing workflows, such as [Nextflow](https://www.nextflow.io/), [Snakemake](https://snakemake.readthedocs.io/en/stable/) o [Cromwell](https://cromwell.readthedocs.io/en/stable/). These tools provide the syntax for defining and developing workflows and enable their execution across different computational environments. Developing new pipelines might require programming skills for integration steps and/or post-processing tasks.
 
 ![[basic-workflow-bg2.svg]]
 
