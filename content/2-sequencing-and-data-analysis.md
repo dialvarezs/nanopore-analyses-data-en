@@ -36,7 +36,7 @@ It is important to determine the required depth before conducting an experiment,
 ### Flowcell efficiency
 
 Oxford Nanopore offers different equipment and flow cells that provide varying amounts of data, so it is important to consider the amount of gigabases each device can deliver when designing an experiment.
-- Flongle: 126 channels, maximum throught of 2.6Gb.
+- Flongle: 126 channels, maximum throughput of 2.6Gb.
 - MinION: 512 channels, maximum throughput of 50Gb, con 512 canales. Nanopore indicates that this flowcell is suitable for experiments between 10Gb and 20Gb.
 - PromethION: 2675 channels, maximum throughput of 290Gb.
 
@@ -57,7 +57,7 @@ The tool used for basecalling and demultiplexing generally can remove these elem
 Sequencing accuracy is crucial because it determines the amount of data required to achieve the desired precision in the desired type of analysis, as well as how many samples can be processed in a single experiment.
 #### RAW Data
 
-Utilizing the latest V14 chemistry and SUP basecalling algorithms, Nanopore technology can achieve raw data accuracies of up to Q23 with simplex sequencing and Q30 with duplex sequencing.
+Utilizing the latest V14 chemistry and SUP basecalling algorithms, Nanopore technology can achieve raw data accuracy up to Q23 with simplex sequencing and Q30 with duplex sequencing.
 
 | Flowcell | Kit                         | Basecalling        | Raw read accuracy |
 | -------- | --------------------------- | ------------------ | ----------------- |
@@ -118,7 +118,7 @@ In Oxford Nanopore's sequencing platform, DNA molecules pass through nanopores. 
 
 Throughout the development of this technology, multiple changes have been introduced to enhance the precision of base recognition, regarding both the chemistry of flow cells and the software that performs basecalling. One of the most recent changes is the introduction of the "R10" nanopore, which features two readers instead of one, aiding in the resolution, especially of homopolymeric regions.
 
-([Dorado](https://github.com/nanoporetech/dorado)) is the official tool created by Oxford Nanopore for basecalling, utilizing a neural network-based algorithm that is trained with mixed datasets of both amplified and native DNA/RNA from various organisms (plants, animals, bacteria, viruses). Dorado also includes features for filtering out low-quality reads, recognizing and trimming known adapters, and estimating methylation.
+([Dorado](https://github.com/nanoporetech/dorado)) is the official tool created by Oxford Nanopore for basecalling, utilizing a neural network-based algorithm that is trained with mixed datasets of both amplified and native DNA/RNA from various organisms (plants, animals, bacteria, viruses). Dorado also includes features for filtering out low-quality reads, recognizing and trimming known adapters, and estimating methylation. And finally, Dorado can demultiplex samples using Nanopore barcoding system.
 
 #### Basecalling accuracy
 

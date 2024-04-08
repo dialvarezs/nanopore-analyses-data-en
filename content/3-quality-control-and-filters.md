@@ -34,7 +34,7 @@ You can calculate the probability of error in the nucleotide using the formula `
 
 [Repository](https://github.com/s-andrews/FastQC) || [Oficial website](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) || [Documentation](https://dnacore.missouri.edu/PDF/FastQC_Manual.pdf)
 
-FastQC is a versatile tool that simplifies the process of obtaining quality metrics from fastq files. It supports inputs in `.fastq`, `.bam`, or `.sam` formats. After processing, FastQC produces an HTML report, wherein each quality metric is presented as a module and assigned a status—Approved, Warning, or Fail—based on the quality assessment. These status indicators are calibrated primarily for data from second-generation sequencing platforms, known for their high-quality outputs, specially directed towards Whole Genome Sequencing (WGS). As a result, when analyzing data from long-read technologies such as Nanopore sequencing, it is common to see modules marked as failed. Consequently, it is essential to have a good understanding of your data's nature and to interpret the FastQC metrics with the sequencing technology's characteristics in mind.
+FastQC is a versatile tool that simplifies the process of obtaining quality metrics from fASTQ files. It supports inputs in `.fastq`, `.bam`, or `.sam` formats. After processing, FastQC produces an HTML report, wherein each quality metric is presented as a module and assigned a status—Approved, Warning, or Fail—based on the quality assessment. These status indicators are calibrated primarily for data from second-generation sequencing platforms, known for their high-quality outputs, specially directed towards Whole Genome Sequencing (WGS). As a result, when analyzing data from long-read technologies such as Nanopore sequencing, it is common to see modules marked as failed. Consequently, it is essential to have a good understanding of your data's nature and to interpret the FastQC metrics with the sequencing technology's characteristics in mind.
 
   
 FastQC provides the following modules for analyzing sequencing data quality:
@@ -47,7 +47,7 @@ FastQC provides the following modules for analyzing sequencing data quality:
     - Warnings are issued if the lower quartile for any base is below 10, or if the median for any base is below 25.
     - Failures occur if the lower quartile for any base falls below 5, or the median for any base is under 20.
 - **Per Sequence Quality Scores:** Displays the distribution of reads across quality scores (X-axis: quality score, Y-axis: number of reads).
-    - Warnings are given if the most frequently observed mean quality is under 27 (equating to a 0.2% error rate).
+    - Warnings are raised if the most frequently observed mean quality is under 27 (equating to a 0.2% error rate).
     - Failures are noted if the most frequently observed mean quality is below 20 (equating to a 1% error rate).
 - **Per Base Sequence Content:** Shows the proportion of each of the four standard DNA bases along the read. Each base (A, C, G, T) is represented by a different color, as indicated in the plot legend.
 - **Per Sequence GC Content:** Examines the GC content across the entire length of each sequence (X-axis: GC content, Y-axis: number of sequences).
@@ -55,7 +55,7 @@ FastQC provides the following modules for analyzing sequencing data quality:
 - **Sequence Length Distribution:** The distribution of fragment sizes within the dataset.
 - **Duplicate Sequences:** Assesses the level of duplication for each sequence in the library, indicating relative numbers of sequences with various degrees of duplication. A low level of duplication may suggest high coverage, while high duplication levels often imply enrichment bias.
 	*By default, analysis is limited to the first 100,000 sequences in each file, and reads over 75bp are truncated to 50bp for this analysis.*
-- **Overrepresented Sequences:** Lists sequences that comprise more than 0.1% of the total. FastQC searches a database for matches to common contaminants and reports the best match found.
+- **Over-represented Sequences:** Lists sequences that comprise more than 0.1% of the total. FastQC searches a database for matches to common contaminants and reports the best match found.
 	*By default, analysis is limited to the first 100,000 sequences in each file, and reads over 75bp are truncated to 50bp for this analysis.*
 - **Adapter Content:** Indicates the cumulative percentage of the library showing each of the adapter sequences at every position. FastQC includes adapters from Illumina, Nextera, and Solid.
 
@@ -70,20 +70,20 @@ fastqc --version
 fastqc --help
 ```
 
-Running FastQC only requires the input file, but you can also specify different parameters such as the number of threads to use and the directory where to save the ouput.  The ouput directory must be created before running the command.
+Running FastQC only requires the input file, but you can also specify different parameters such as the number of threads to use and the directory where to save the output.  The output directory must be created before running the command.
 ```bash
 fastqc <file.fastq>
 fastqc <file.fastq> --outdir <fastqc_report> --threads 4
 ```
 
-Several parameters can be specified, such as the minimun length of the reads to use `--min_length`, specifying a fasta file with contaminants (`--contaminants`) or adapters (`--adapters`), etc. All the parameters are defined in the help section of the tool.
+Several parameters can be specified, such as the minimum length of the reads to use `--min_length`, specifying a fasta file with contaminants (`--contaminants`) or adapters (`--adapters`), etc. All the parameters are defined in the help section of the tool.
 
 Executing FastQC without arguments and if it is running in system with graphical interface will open a desktop application. In this application you can load the FASTQ file and visualize the reports.
 
 #### Nanoplot
 [Repository](https://github.com/wdecoster/NanoPlot) 
 
-Nanoplot is a quality check tool specfically designed for long read data. There is an online version where you can upload files, but is limitated only a maximum file size of 100MB ([Nanoplot](http://nanoplot.bioinf.be)).
+Nanoplot is a quality check tool specifically designed for long read data. There is an online version where you can upload files, but is limitated only a maximum file size of 100MB ([Nanoplot](http://nanoplot.bioinf.be)).
 
 Installation of NanoPlot via Conda is straightforward:
 ```bash
@@ -101,7 +101,7 @@ Running NanoPlot typically requires just the input file. However, users can also
 NanoPlot --fastq bc02.fq --outdir bc02 
 ```
 
-Additionally, users can define the minimum and maximum read lengths for analysis and specify a prefix for the output files. This last option is neccesary when aggregating reports with tools like MultiQC.
+Additionally, users can define the minimum and maximum read lengths for analysis and specify a prefix for the output files. This last option is necessary when aggregating reports with tools like MultiQC.
 ```bash
 NanoPlot --threads 4 --fastq bc02.fq --outdir bc02 --minlength 1000 --maxlength 2000 --prefix bc02
 ```
@@ -134,7 +134,7 @@ multiqc <path_to_fastqc_results> --filename multiqc_raw_data
 #### Fastp
 [Repository](https://github.com/OpenGene/fastp)
 
-Fastp is a comprehensive tool for processing fastq format files, offering features like adapter trimming, quality filtering, trimming by quality or specific positions, and filtering reads by minimum and maximum length.
+Fastp is a comprehensive tool for processing FASTQ format files, offering features like adapter trimming, quality filtering, trimming by quality or specific positions, and filtering reads by minimum and maximum length.
 
 Installation of Fastp can be done via Conda, along with commands to check its version and help documentation:
 ```bash

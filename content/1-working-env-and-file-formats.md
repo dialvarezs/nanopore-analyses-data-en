@@ -23,7 +23,7 @@ For example, in the next command:
 samtools view seq.sam --output seq.bam --bam --threads 4
 ```
 - `samtools`: Command (tool). 
-- `view`: Subcommand. This specific tool (sammtols) tool have several subcommands that have differents functions.
+- `view`: Subcommand. This specific tool (samtools) tool have several subcommands that have different functions.
 - `seq.sam`: Argument. For this command, is the input.
 - `--output seq.bam`: Option `--output` which has the argument `seq.bam`. This tool supports short form of option, so you can indicate `-o` instead of `--output`.
 - `--bam`: Option without arguments.
@@ -36,7 +36,7 @@ Most commands offer help documentation where the options and arguments are detai
 ### Remote access
 #### Secure Shell (`ssh`)
 
-Secure Shell (`SSH`) is a protocol that allows users to connect to and use remote Linux servers over the network. `ssh` conections are encrypted, which means that sending password, storing data and editing files are secure.
+Secure Shell (`SSH`) is a protocol that allows users to connect to and use remote Linux servers over the network. `ssh` connections are encrypted, which means that sending password, storing data and editing files are secure.
 
 To connect to a remote server we use `ssh` command. `ssh` requires the username and the desired server to connect to. 
 
@@ -288,7 +288,6 @@ When considering Conda for managing your environments and packages, you will fin
 
 #### Usage
 ##### Creating virtual enviroments
-
 To initiate a new virtual environment, use the `create` subcommand with the `--name` (or `-n`) option to name your environment.
 ```bash
 conda create --name bioinformatic-analyses
@@ -301,7 +300,6 @@ conda create -n python311 python=3.11
 ```
 
 ##### Listing virutal enviroments
-
 To view all existing environments, use:
 ```bash
 conda env list  # or
@@ -309,7 +307,6 @@ conda info --envs
 ```
 
 ##### Activating an environment
-
 Activate an environment to use the tools installed in it. The enviroment will remain activated as long as the terminal session is active. Only one enviroment per terminal can be used, but if you need to change the enviroment, you can deactivate the current envioroment and activate the new one.
 ```bash
 conda activate <name_env>
@@ -317,14 +314,12 @@ conda activate bioinformatic-analyses
 ```
 
 ##### Deactivating an enviroment
-
 To deactivate the current environment, use the following command:
 ```bash
 conda deactivate 
 ```
 
 ##### Deleting enviroments
-
 The subcommand `remove` is used to remove an enviroment. The option `--name` or `-n` must be specified, indicating the name of the environment to delete.
 ```bash
 conda env remove -n bioinformatic-analyses
@@ -332,7 +327,6 @@ conda env remove --name bioinformatic-analyses
 ```
 
 ##### Installing packages
-
 To install a package, use the `install` subcommand followed by the name of the package to install. The Anaconda page has a secction where users can search available packages and the command to used for installation ([Anaconda Search](https://anaconda.org/search)). Another option is to use the subcommand `search`to locate packages.
 
 There are differents repositories called "channels". In some cases it is necessary to use additional channels to install specific tools or newer versions of tools. In particular, the [bioconda](https://bioconda.github.io/) channel is a specialized channel in bioinformatics tools. If you often use tools from this repository, it may be useful to configure it permanently.
@@ -351,9 +345,7 @@ conda install -c bioconda flye=2.9.1
 >[!warning] Package conflicts
 >When installing packages, it is highly recommended to check the version of the package on the official site or repository, because sometimes conda will install older versions when there are conflicting dependencies. If you can't install the version you want in the current environment, consider installing it in a new environment.
 ##### Listing installed packages
-
 To review installed packages and their versions within the active environment, use `list`.
-
 ```bash
 conda list
 ```
