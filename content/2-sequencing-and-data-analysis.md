@@ -110,7 +110,7 @@ There are several tools available for defining and executing workflows, such as 
 ![[basic-workflow-bg2.svg]]
 
 Numerous bioinformatics pipelines are available online, offering comprehensive analysis tools for a variety of research needs. Repositories such as [EPI2ME Labs Workflows](https://labs.epi2me.io/wfindex/) and [Nf-core](https://nf-co.re/) provide standardized pipelines tailored for different analyses, ensuring quality and reproducibility. These collections are essential resources for researchers seeking reliable and tested workflows. In addition to these repositories, independent pipelines such as [Bactopia](https://github.com/bactopia/bactopia) cater to specific needs, in this case, bacterial genomic analyses.
-## Basecalling
+## Basecalling and demultiplexing
 
 In Oxford Nanopore's sequencing platform, DNA molecules pass through nanopores. As the molecule passes through a pore, it can detect alterations caused by the molecule's ions, which are encoded by an electrical signal that is recorded on the computational equipment. Determining the nucleotide sequence of the molecule that passed through the pore requires the use of complex computational algorithms; this process is known as **basecalling**.
 
