@@ -2,7 +2,7 @@
 title: 1. Working environment and file formats
 ---
 > [!summary] In this chapter
-> - Command line (CLI) usage
+> - What is the command linterface and how to execute commands
 > - Managing work environment with Conda
 > - Common file formats in bioinformatics
 ## How to use the command line

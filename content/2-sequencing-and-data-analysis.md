@@ -3,8 +3,9 @@ title: 2. Sequencing and data analysis options
 ---
 > [!summary] In this chapter
 > - Considerations when working with Oxford Nanopore
-> - Basecalling
-> - Demultiplexing
+> - Data analysis options
+> - Sequencing output structure
+> - What is the basecalling and how accurate it is
 
 
 ## Oxford Nanopore Sequencing experiment design and analysis considerations
@@ -95,6 +96,17 @@ EPI2ME has various pipelines for different analyses. More information about the 
     - Assembly and identification of SARS-CoV-2 with ARTIC
     - Assembly and alignment of reads with reference for Monkeypox
     - Taxonomic identification of 16S rRNA genes with Blast
+
+### Bioinformatics pipelines
+
+Bioinformatics pipelines are a prevalent method for executing complex bioinformatics workflows. These pipelines are structured sequences of computational processes, interconnected so that the output files from certain tools serve as inputs for others.
+
+Bioinformatics pipelines are essential for automating and ensuring streamlined, reproducible analyses. This is accomplished by specifying the execution order of tools, how they will be executed, and the handling of their outputs (whether to store them, use them as input for another tool, transform them, etc.).
+
+There are several tools available for defining and executing workflows, such as [Nextflow]([https://www.nextflow.io/](https://www.nextflow.io/)), [Snakemake](https://snakemake.readthedocs.io/en/stable/) o [Cromwell](https://cromwell.readthedocs.io/en/stable/). These tools provide the syntax for defining and developing workflows and enable their execution across different computational environments. Developing new pipelines might require programming skills for integration steps and/or post-processing tasks.
+
+![[basic-workflow-bg2.svg]]
+
 
 ## Basecalling
 

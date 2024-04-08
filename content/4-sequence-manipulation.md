@@ -5,9 +5,9 @@ title: 4. Sequence manipulation
 > - Manipulation of sequence files (`fasta`, `fastq`) using seqkit.
 
 ## seqkit
-[Repositorio](https://github.com/shenwei356/seqkit) || [Documentación](https://bioinf.shenwei.me/seqkit/usage/)
+[Repository](https://github.com/shenwei356/seqkit) || [Documentation](https://bioinf.shenwei.me/seqkit/usage/)
 
-Seqkit allows for efficient manipulation and processing of FASTQ and FASTA files.
+Seqkit is a efficient tool for manipulating and processing FASTA and FASTQ files.
 
 It can be installed via conda.
 ```bash
