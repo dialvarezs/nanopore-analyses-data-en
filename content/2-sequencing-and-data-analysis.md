@@ -66,9 +66,9 @@ Utilizing the latest V14 chemistry and SUP basecalling algorithms, Nanopore tech
 #### Consensus
 Consensus is achieved by assembling multiple reads, thereby reducing errors through overlapping.
 
-| Flowcell | Consensus precission | Analysis tools                                          |
-| -------- | -------------------- | ------------------------------------------------------- |
-| R10.4.1  | Q50 at 10-20x        | Basecalling sup + assembly with Flye + medaka polishing |
+| Flowcell | Consensus precision | Analysis tools                                          |
+| -------- | ------------------- | ------------------------------------------------------- |
+| R10.4.1  | Q50 at 10-20x       | Basecalling sup + assembly with Flye + medaka polishing |
 Most up-to-date information regarding Nanopore accuracy, please visit [Oxford Nanopore Technologies' website](https://nanoporetech.com/platform/accuracy).
 
 ## Data analysis options
