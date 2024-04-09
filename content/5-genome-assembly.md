@@ -9,7 +9,7 @@ There are two main types of assembly: "*denovo* assembly" and "comparative assem
 
 Second-generation sequencing technologies produce reads ranging from 20bp to 500bp, making the assembly of repetitive regions or longer regions challenging. Thus, third-generation sequencing technologies have been instrumental in reducing costs and complexities when assembling genomes or regions with the aforementioned characteristics, thanks to their ability to generate reads of several kilobases in length.
 
-![[Advantages-of-long-read-assembly-Shown-here-is-a-genome-sequence-with-3-unique-segments-_1_ 1.png]]
+![[long_vs_short_read_assembly.png]]
 
 The NCBI hosts a platform that allows visualization of all assemblies uploaded to its database, including their size, taxonomic description, and the number of assemblies per organism. ([Website](https://www.ncbi.nlm.nih.gov/genome/browse/#!/overview/))
 
