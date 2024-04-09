@@ -93,12 +93,12 @@ Keeping Medaka updated is essential; using outdated versions may result in the a
 
 To execute Medaka you will need the assembly to polish, and the raw reads that Medaka will use to correct errors. Here's a simple Medaka command to generate a polished consensus:
 ```bash
-medaka consensus -o assembly_medaka -t 4 -i sequences.fasta -d draft_assembly.fasta
+medaka_consensus -o assembly_medaka -t 4 -i sequences.fasta -d draft_assembly.fasta
 ```
 
-If a model isn't specified, medaka will try to find the basecaller metadata in the FASTQ file to decide the correct model, and if it can't find this information, it will use the default one (which can be checked with `medaka consensus -h`). To specify a model, use the `-m` parameter. Below is an example including a specific model:
+If a model isn't specified, medaka will try to find the basecaller metadata in the FASTQ file to decide the correct model, and if it can't find this information, it will use the default one (which can be checked with `medaka_consensus -h`). To specify a model, use the `-m` parameter. Below is an example including a specific model:
 ```bash
-medaka consensus -o assembly_medaka -t 4 -i basecalled_reads.fastq -d draft_assembly.fasta -m r1041_e82_400bps_sup_v4.2.0
+medaka_consensus -o assembly_medaka -t 4 -i basecalled_reads.fastq -d draft_assembly.fasta -m r1041_e82_400bps_sup_v4.2.0
 ```
 
 This approach ensures that Medaka can tailor its processing to the specific characteristics of the input data, resulting in higher accuracy of the final assembled sequences.
