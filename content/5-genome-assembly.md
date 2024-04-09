@@ -60,7 +60,7 @@ Flye outputs three key files:
 >[!tip] Reducing usage of computational resources
 >Utilizing the `--asm-coverage` and `--min-overlap` parameters can help reduce memory usage, computational resources, and runtime.
 
-## Polishers
+### Polishers
 
 #### #### Medaka
 
@@ -97,7 +97,7 @@ medaka_consensus -o assembly_medaka -t 4 -i basecalled_reads.fastq -d draft_asse
 
 This approach ensures that Medaka can tailor its processing to the specific characteristics of the input data, resulting in higher accuracy of the final assembled sequences.
 
-## QC tools
+### QC tools
 
 #### Quast
 [Repository](https://github.com/ablab/quast) || [Documentation](http://bioinf.spbau.ru/quast)
