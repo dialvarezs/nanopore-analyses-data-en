@@ -62,7 +62,7 @@ Flye outputs three key files:
 
 ### Polishers
 
-#### #### Medaka
+#### Medaka
 
 [Repository](https://github.com/nanoporetech/medaka)
 
