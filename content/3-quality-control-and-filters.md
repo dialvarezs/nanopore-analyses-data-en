@@ -59,7 +59,7 @@ FastQC provides the following modules for analyzing sequencing data quality:
 	*By default, analysis is limited to the first 100,000 sequences in each file, and reads over 75bp are truncated to 50bp for this analysis.*
 - **Adapter Content:** Indicates the cumulative percentage of the library showing each of the adapter sequences at every position. FastQC includes adapters from Illumina, Nextera, and Solid.
 
-Is it possible to install FastQC via Conda:
+Is it possible to install FastQC via conda:
 ```bash
 conda install -c bioconda fastqc
 ```
@@ -85,7 +85,7 @@ Executing FastQC without arguments and if it is running in system with graphical
 
 Nanoplot is a quality check tool specifically designed for long read data. There is an online version where you can upload files, but is limitated only a maximum file size of 100MB ([Nanoplot](http://nanoplot.bioinf.be)).
 
-Installation of NanoPlot via Conda is straightforward:
+Installation of NanoPlot via conda is straightforward:
 ```bash
 conda install -c bioconda nanoplot
 ```
@@ -115,7 +115,7 @@ MultiQC aggregates results from various bioinformatics tools across multiple sam
 
 Supported by MultiQC are log files from tools such as `fastqc`, `fastp`, `cutadapt`, `NanoPlot`, `jellyfish`, among others. For a complete list of supported modules, refer to the official documentation ([MultiQC modules](https://multiqc.info/docs/#multiqc-modules)).
 
-MultiQC can be installed via Conda, and you can verify the installation by checking the version or accessing help:
+MultiQC can be installed via conda, and you can verify the installation by checking the version or accessing help:
 ```bash
 conda install -c bioconda multiqc
 
