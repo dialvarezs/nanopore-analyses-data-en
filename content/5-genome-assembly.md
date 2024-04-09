@@ -33,7 +33,7 @@ There are multiple assemblers available, such as `SPAdes`, `Canu`, `Flye`, among
 
 #### Flye
 
-[Repository](https://github.com/fenderglass/Flye) || [Documentation](https://github.com/fenderglass/Flye/blob/flye/docs/USAGE.md)
+[Repository](https://github.com/fenderglass/Flye) || [Documentation](https://github.com/fenderglass/Flye/blob/flye/docs/USAGE.md)|| [Article](https://www.nature.com/articles/s41587-019-0072-8)
 
 Flye is a state-of-the-art _de novo_ assembler designed for single-molecule sequencing reads, such as those from Oxford Nanopore Technologies and PacBio. Flye provides a comprehensive workflow that includes read correction prior to assembly, enhancing the accuracy of the assembly process. It is capable of assembling complete genomes and metagenomes.
 
