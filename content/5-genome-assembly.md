@@ -119,6 +119,8 @@ Quast provides detailed reports that include essential metrics such as contiguit
 
 CheckM2 is a tool designed for assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes. It offers an extensive suite of analyses to evaluate the completeness and contamination levels of these genomes. This tool is particularly valuable for microbial ecology studies and metagenomic projects where accurate genome quality assessment is crucial.
 
+CheckM2 uses a machine learning model trained on simulated genomes with known levels of completeness and contamination, benchmarked, and subsequently applied to MAGs from a range of different environments.
+
 Installation can be performed via conda, and check the help and installed version:
 ```bash
 conda install -c bioconda checkm2
@@ -126,4 +128,19 @@ checkm2 --help
 checkm2 --version
 ```
 
-(continue...)
+CheckM2 operates with a required database for making its predictions. You can download this database directly through the tool:
+```bash
+# This will download the database at "checkm2_db/CheckM2_database/uniref100.KO.1.dmnd"
+checkm2 database --download --path checkm2_db
+```
+
+Once the database is downloaded, you can perform predictions on one or multiple files, specifying the `-i` argument, either by specifying them as `genome1.fasta genome2.fasta ...` or by a wildcard, like `genomes/*.fasta`. In this case, the `database_path` argument is set to the location of the previous command (the `.dmnd` file).
+```bash
+checkm2 predict \
+	--input genome1.fasta \
+	--output-directory checkm2_results \
+	--database_path checkm2_db/CheckM2_database/uniref100.KO.1.dmnd \
+	--threads 4
+```
+
+CheckM2 provides the results in a CSV file, where the most important columns are **Completeness** and **Contamination**. Recommended values for high quality genomes (either isolated or metagenome-assembled) are completeness > 90% and contamination < 5%.

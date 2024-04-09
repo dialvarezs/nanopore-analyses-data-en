@@ -3,7 +3,7 @@ title: 3. Quality control and filters
 ---
 >[!summary] In this chapter
 > - How to perform quality control using tools such as FastQC and NanoPlot and understand the results provided by these tools
-> - How to summarize statistics for a set of samples
+> - How to summarize statistics for a set of samples using MultiQC
 > - How to filter your data using tools like Fastp and Cutadapt
 
 ## Quality control

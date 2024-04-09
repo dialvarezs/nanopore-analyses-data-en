@@ -21,3 +21,8 @@ By Diego Alvarez ([@dialvarezs](https://github.com/dialvarezs)) and Jacqueline A
 
 **Chapter 4: [[4-sequence-manipulation|Sequence manipulation]]**
 - Manipulating sequences with SeqKit
+
+**Chapter 5: [[5-genome-assembly|Genome assembly]]**
+- Assembling a genome using Flye
+- Polishing with Medaka
+- Checking completness and contamination using CheckM2
