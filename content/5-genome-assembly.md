@@ -1,6 +1,12 @@
 ---
 title: 5. Genome assembly
 ---
+>[!summary] In this chapter
+> - What is genome assembly and what tries to achieve?
+> - How to assemble a genome using Flye
+> - How to polish and assembly using Medaka
+> - How to check genome completeness and contamination with CheckM2
+
 ## What is genome assembly?
 
 Genome assembly aims to piece together DNA fragments, using overlaps between reads or other techniques, to ideally obtain a single contig with the reconstructed genome. One of the most common approaches to assembly involves searching for overlaps among reads to assemble them into longer contigs.
@@ -85,14 +91,14 @@ r1041_e82_400bps_sup_v4.3.0
 
 Keeping Medaka updated is essential; using outdated versions may result in the absence of the most suitable models, impacting the quality of consensus sequences or variant detection.
 
-Here's a simple Medaka command to generate a polished consensus:
+To execute Medaka you will need the assembly to polish, and the raw reads that Medaka will use to correct errors. Here's a simple Medaka command to generate a polished consensus:
 ```bash
-medaka_consensus -o assembly_medaka -t 4 -i sequences.fasta -d draft_assembly.fasta
+medaka consensus -o assembly_medaka -t 4 -i sequences.fasta -d draft_assembly.fasta
 ```
 
-If a model isn't specified, the default will be used (which can be checked with `medaka_consensus -h`). To specify a model, use the `-m` parameter. Below is an example including a specific model:
+If a model isn't specified, medaka will try to find the basecaller metadata in the FASTQ file to decide the correct model, and if it can't find this information, it will use the default one (which can be checked with `medaka consensus -h`). To specify a model, use the `-m` parameter. Below is an example including a specific model:
 ```bash
-medaka_consensus -o assembly_medaka -t 4 -i basecalled_reads.fastq -d draft_assembly.fasta -m r1041_e82_400bps_sup_v4.3.0
+medaka consensus -o assembly_medaka -t 4 -i basecalled_reads.fastq -d draft_assembly.fasta -m r1041_e82_400bps_sup_v4.2.0
 ```
 
 This approach ensures that Medaka can tailor its processing to the specific characteristics of the input data, resulting in higher accuracy of the final assembled sequences.

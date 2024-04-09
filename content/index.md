@@ -23,6 +23,6 @@ By Diego Alvarez ([@dialvarezs](https://github.com/dialvarezs)) and Jacqueline A
 - Manipulating sequences with SeqKit
 
 **Chapter 5: [[5-genome-assembly|Genome assembly]]**
-- Assembling a genome using Flye
-- Polishing with Medaka
-- Checking completness and contamination using CheckM2
+- Genome assembly using Flye
+- Assembly polishing with Medaka
+- Assembly quality check using Quast and CheckM2
