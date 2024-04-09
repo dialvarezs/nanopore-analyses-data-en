@@ -109,7 +109,7 @@ NanoPlot --threads 4 --fastq bc02.fq --outdir bc02 --minlength 1000 --maxlength 
 NanoPlot generates an HTML report featuring interactive plots and a summarized text report.
 
 #### MultiQC
-[Documentation](https://multiqc.info/docs) 
+[Documentation](https://multiqc.info/docs) || [Article](https://academic.oup.com/bioinformatics/article/32/19/3047/2196507)
 
 MultiQC aggregates results from various bioinformatics tools across multiple samples into a unified report, streamlining the analysis process. By scanning a specified directory for analysis logs, MultiQC assembles a comprehensive HTML report.
 
@@ -132,7 +132,7 @@ multiqc <path_to_fastqc_results> --filename multiqc_raw_data
 
 ## Quality filtering
 #### Fastp
-[Repository](https://github.com/OpenGene/fastp)
+[Repository](https://github.com/OpenGene/fastp) || [Article](https://academic.oup.com/bioinformatics/article/34/17/i884/5093234)
 
 Fastp is a comprehensive tool for processing FASTQ format files, offering features like adapter trimming, quality filtering, trimming by quality or specific positions, and filtering reads by minimum and maximum length.
 

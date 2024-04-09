@@ -136,7 +136,7 @@ checkm2 --version
 
 CheckM2 operates with a required database for making its predictions. You can download this database directly through the tool:
 ```bash
-# This will download the database at "checkm2_db/CheckM2_database/uniref100.KO.1.dmnd"
+# This will download the database to "checkm2_db/CheckM2_database/uniref100.KO.1.dmnd"
 checkm2 database --download --path checkm2_db
 ```
 
