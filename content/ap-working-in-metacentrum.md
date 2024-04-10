@@ -115,4 +115,15 @@ To monitor the status of running jobs in the Metacentrum, the `qstat` command is
 
 ## Recommendations
 
-Use tmux.
+### Tmux
+
+Tmux is a terminal multiplexer, allowing a user to access multiple separate terminal sessions inside a single terminal window or remote terminal session. It's particularly useful for running more than one command-line program at the same time within the same terminal, or for keeping terminal sessions running even after disconnecting from a server.
+#### Basic Usage
+
+1. **Starting tmux**: Open a terminal and type `tmux` to start a new session.
+2. **Creating New Windows**: You can create a new window within tmux by pressing `Ctrl+b` followed by `c`.
+3. **Switching Between Windows**: To switch between your tmux windows, press `Ctrl+b` followed by the window number or use `Ctrl+b` and `n` for the next window and `Ctrl+b` and `p` for the previous window.
+4. **Splitting Windows**: Split the window horizontally with `Ctrl+b` then `"` and vertically with `Ctrl+b` then `%`.
+5. **Detaching and Attaching Sessions**: You can detach from a tmux session and leave it running in the background by pressing `Ctrl+b` then `d`. To reattach to a session, use `tmux attach-session` or `tmux a` for short.
+
+For more commands, you can check [this cheatsheet](https://tmuxcheatsheet.com/).
