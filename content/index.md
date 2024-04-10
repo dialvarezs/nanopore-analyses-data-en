@@ -27,5 +27,6 @@ By Diego Alvarez ([@dialvarezs](https://github.com/dialvarezs)) and Jacqueline A
 - Assembly polishing with Medaka
 - Assembly quality check using Quast and CheckM2
 
+**Chapter 6: [[6-executing-nextflow-pipelines|Executing Nextflow pipelines]]**
 
 **Appendix: [[ap-working-in-metacentrum|Working in Metacentrum]]**
