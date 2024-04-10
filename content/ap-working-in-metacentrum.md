@@ -112,3 +112,7 @@ To monitor the status of running jobs in the Metacentrum, the `qstat` command is
 	```
 	Replace `<username>` with your actual username on the cluster. This will display only the jobs submitted by you, making it easier to track your own processes.
 
+
+## Tips
+
+Use tmux.
