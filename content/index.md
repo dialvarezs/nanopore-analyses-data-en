@@ -4,7 +4,7 @@ title: Oxford Nanopore Data Analysis Course
 By Diego Alvarez ([@dialvarezs](https://github.com/dialvarezs)) and Jacqueline Aldridge ([@JacquelineAldridge](https://github.com/JacquelineAldridge)).
 # Contents
 
-**Chapter 1: [[1-working-env-and-file-formats|Working environment and file types]]**
+**Chapter 1: [[1-working-env-and-file-formats|Working environment and file formats]]**
 - Command (CLI) line usage
 - Managing work environment with Conda
 - Common file formats in bioinformatics
@@ -26,3 +26,6 @@ By Diego Alvarez ([@dialvarezs](https://github.com/dialvarezs)) and Jacqueline A
 - Genome assembly using Flye
 - Assembly polishing with Medaka
 - Assembly quality check using Quast and CheckM2
+
+
+**Appendix: [[ap-working-in-metacentrum|Working in Metacentrum]]**
